@@ -13,16 +13,16 @@ $serv->set(array('task_worker_num' => 4));
 
 $serv->on('receive', function ($serv, $fd, $from_id, $data){
     $task_id = $serv->task($data);
-    echo "yi bu ID:" . $task_id.PHP_EOL;
+    echo "异步 ID: " . $task_id.PHP_EOL;
 });
 
 $serv->on('task', function ($serv, $task_id, $from_id, $data){
-    echo "zhi xing yibu ID:" . $task_id.PHP_EOL;
+    echo "执行异步 ID: " . $task_id.PHP_EOL;
     $serv->finish("$data -> OK");
 });
 
 $serv->on("finish", function ($serv, $task_id, $data){
-    echo "finish" . $task_id.PHP_EOL;
+    echo "处理完成：" . $task_id.PHP_EOL;
 });
 
 $serv->start();

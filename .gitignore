@@ -1,0 +1,10 @@
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+.env
+.idea/
+public/upload/problemimg/15f5fea7e5ab6933e731a9b29043c20ed687.jpg
+public/post.txt
+public/post.txt
+storage/debugbar/

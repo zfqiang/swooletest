@@ -15,7 +15,8 @@ $server->on('open', function (){
 });
 
 
-$server->on('message', function (){
+$server->on('message', function ($server, $frame){
+    var_dump($frame);
     echo "收到消息";
 });
 
